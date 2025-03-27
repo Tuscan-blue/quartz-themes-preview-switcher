@@ -11,8 +11,8 @@
 
 ## 步骤
 
-1. 打开 [quartz-themes主题预览：80s-neon](https://quartz-themes.github.io/80s-neon)。
-2. 启用此脚本。
+1. 启用此脚本。
+2. 打开 [quartz-themes主题预览：80s-neon](https://quartz-themes.github.io/80s-neon)。
 3. 点击 '◀' 和 '▶' 按钮，切换不同的主题以方便快捷地预览不同的主题效果。
 
 ## 特点
@@ -30,4 +30,4 @@
 
 ## 许可证
 
-本项目使用 MIT 许可证 - 详情请参阅 [MIT LICENSE](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/blob/main/LICENSE) 文件。
+本项目使用 MIT 许可证 - 详情请参阅 [MIT LICENSE](LICENSE) 文件。

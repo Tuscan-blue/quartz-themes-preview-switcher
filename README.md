@@ -11,8 +11,8 @@ Switch between different theme effects of [quartz-themes](https://github.com/sab
 
 ## Steps
 
-1. Navigate to [quartz themes preview: 80s-neon](https://quartz-themes.github.io/80s-neon)
-2. Enable this script.
+1. Enable this script.
+2. Navigate to [quartz themes preview: 80s-neon](https://quartz-themes.github.io/80s-neon)
 3. Click on the '◀' and '▶' buttons to switch between different theme effects.
 
 ## Features
@@ -30,4 +30,4 @@ Please pay attention to the two buttons in the bottom right corner.
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT LICENSE](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE) file for details.
