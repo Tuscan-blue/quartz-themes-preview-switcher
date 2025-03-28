@@ -7,7 +7,7 @@
 ## 安装
 
 1. 安装一个形如 Tampermonkey（Chrome）或 Greasemonkey（Firefox）的浏览器拓展应用。
-2. 点击 [此链接](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/raw/refs/heads/main/quartz-themes-preview-switcher.user.js) 安装脚本。
+2. 点击 [此链接](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/raw/refs/heads/main/quartz-themes-preview-switcher.user.js) 或者 [GreasyFork: quartz themes preview switcher](https://greasyfork.org/en/scripts/531094-quartz-themes-preview-switcher) 安装脚本。
 
 ## 步骤
 

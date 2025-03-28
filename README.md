@@ -7,7 +7,7 @@ Switch between different theme effects of [quartz-themes](https://github.com/sab
 ## Installation
 
 1. Install a browser extension like Tampermonkey (for Chrome) or Greasemonkey (for Firefox).
-2. Click on [this link](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/raw/refs/heads/main/quartz-themes-preview-switcher.user.js) to install the script.
+2. Click on [this link](https://github.com/Tuscan-blue/quartz-themes-preview-switcher/raw/refs/heads/main/quartz-themes-preview-switcher.user.js) or [GreasyFork: quartz themes preview switcher](https://greasyfork.org/en/scripts/531094-quartz-themes-preview-switcher) to install the script.
 
 ## Steps
 
