@@ -2,9 +2,9 @@
 // @name         quartz themes preview switcher
 // @name:zh-CN   quartz主题预览切换器
 // @namespace    https://github.com/Tuscan-blue/quartz-themes-preview-switcher
-// @version      1.0
-// @description  Switch between different theme effects of quartz-themes quickly by using the '◀' and '▶' buttons.
-// @description:zh-CN  通过"◀"和"▶"按钮切换以快速预览quartz-themes的不同主题效果。
+// @version      1.1
+// @description  Switch between different theme effects of quartz-themes quickly by using the '◀', '▶' and '🌙/🔆' buttons.
+// @description:zh-CN  通过"◀"，"▶"和"🌙/🔆"按钮切换以快速预览quartz-themes的不同主题效果。
 // @author       Tuscan-blue
 // @license      MIT
 // @match        https://quartz-themes.github.io/*
@@ -393,7 +393,7 @@
     });
     prevBtn.style.right = '65px';
     prevBtn.style.borderRight = '1px solid #a4c3b2';
-    prevBtn.style.borderRadius = '5px 0 0 5px';
+    // prevBtn.style.borderRadius = '5px 0 0 5px';
 
     const nextBtn = createButton('▶', () => {
         if (currentIndex < paths.length - 1) {
@@ -402,4 +402,25 @@
     });
     nextBtn.style.right = '40px';
     nextBtn.style.borderRadius = '0 5px 5px 0';
+
+    const htmlElement = document.querySelector("html");
+    let mode = htmlElement.getAttribute("saved-theme");
+    let modeText = mode==='dark'?'🔆':'🌙';
+    const modeBtn = createButton(modeText , null);
+    modeBtn.style.right = '90px';
+    modeBtn.style.borderRadius = '5px 0 0 5px';
+    modeBtn.style.borderRight = '1px solid #a4c3b2';
+
+    modeBtn.addEventListener('click', () => {
+        if(mode === 'dark'){
+            htmlElement.setAttribute("saved-theme","light");
+            modeText = '🌙';
+            mode = 'light';
+        }else{
+            htmlElement.setAttribute("saved-theme","dark");
+            modeText = '🔆';
+            mode = 'dark';
+        }
+        modeBtn.innerText = modeText;
+    });
 })();
