@@ -2,16 +2,18 @@
 // @name         quartz themes preview switcher
 // @name:zh-CN   quartz主题预览切换器
 // @namespace    https://github.com/Tuscan-blue/quartz-themes-preview-switcher
-// @version      1.1
+// @version      1.2
 // @description  Switch between different theme effects of quartz-themes quickly by using the '◀', '▶' and '🌙/🔆' buttons.
 // @description:zh-CN  通过"◀"，"▶"和"🌙/🔆"按钮切换以快速预览quartz-themes的不同主题效果。
 // @author       Tuscan-blue
 // @license      MIT
 // @match        https://quartz-themes.github.io/*
-// @grant        none
+// @grant        window.onurlchange
+// @downloadURL  https://update.greasyfork.org/scripts/531094/quartz%20themes%20preview%20switcher.user.js
+// @updateURL    https://update.greasyfork.org/scripts/531094/quartz%20themes%20preview%20switcher.meta.js
 // ==/UserScript==
 
-(function () {
+function switcher() {
     'use strict';
 
     // 网址前缀
@@ -352,13 +354,15 @@
         "zenburn"
     ];
 
+    const path = window.location.pathname.split("/");
+
     function getCurrentIndex() {
-        const currentPath = window.location.pathname.replace(/^\/|\/$/g, '');
-        return paths.indexOf(currentPath);
+        return paths.indexOf(path[1]);
     }
 
     function updateURL(newPath) {
-        window.location.href = baseUrl + newPath + '/';
+        const fixedPath = path.slice(2).join('/');
+        window.location.href = baseUrl + newPath + '/' + fixedPath + window.location.hash;
     }
 
     function createButton(text, onClick) {
@@ -405,22 +409,32 @@
 
     const htmlElement = document.querySelector("html");
     let mode = htmlElement.getAttribute("saved-theme");
-    let modeText = mode==='dark'?'🔆':'🌙';
-    const modeBtn = createButton(modeText , null);
+    let modeText = mode === 'dark' ? '🔆' : '🌙';
+    const modeBtn = createButton(modeText, null);
     modeBtn.style.right = '90px';
     modeBtn.style.borderRadius = '5px 0 0 5px';
     modeBtn.style.borderRight = '1px solid #a4c3b2';
 
     modeBtn.addEventListener('click', () => {
-        if(mode === 'dark'){
-            htmlElement.setAttribute("saved-theme","light");
+        if (mode === 'dark') {
+            htmlElement.setAttribute("saved-theme", "light");
             modeText = '🌙';
             mode = 'light';
-        }else{
-            htmlElement.setAttribute("saved-theme","dark");
+        } else {
+            htmlElement.setAttribute("saved-theme", "dark");
             modeText = '🔆';
             mode = 'dark';
         }
         modeBtn.innerText = modeText;
     });
+}
+
+switcher();
+
+(function () {
+    if (window.onurlchange === null) {
+        window.addEventListener('urlchange', (info) => {
+            switcher();
+        });
+    }
 })();
