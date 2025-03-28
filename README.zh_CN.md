@@ -2,7 +2,7 @@
 
 [英文](README.md) | [中文](README.zh_CN.md)
 
-通过使用 '◀' 和 '▶' 按钮，快速预览 [quartz-themes](https://github.com/saberzero1/quartz-themes/tree/master) 的不同主题效果。
+通过使用 '◀'，'▶'和'🌙/🔆' 按钮，快速预览 [quartz-themes](https://github.com/saberzero1/quartz-themes/tree/master) 的不同主题效果。
 
 ## 安装
 
@@ -14,16 +14,18 @@
 1. 启用此脚本。
 2. 打开 [quartz-themes主题预览：80s-neon](https://quartz-themes.github.io/80s-neon)。
 3. 点击 '◀' 和 '▶' 按钮，切换不同的主题以方便快捷地预览不同的主题效果。
+4. 点击 '🌙/🔆' 按钮，在明亮和黑暗模式下切换。
 
 ## 特点
 
 - 快速切换 quartz-themes 的不同主题。
 - 使用便捷的 '◀' 和 '▶' 按钮进行导航。
+- 使用 '🌙/🔆' 按钮切换明亮和黑暗模式。
 - 可以快捷地预览不同的 quartz-themes 主题，方便筛选出你所喜欢的主题。
 
 ## 截图
 
-请注意右下角的两个按钮。
+请注意右下角的三个按钮。
 ![按钮](./screenshots/buttons.png)
 ![截图 1](./screenshots/screenshot1.png)
 ![截图 2](./screenshots/screenshot2.png)
